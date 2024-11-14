@@ -8,11 +8,11 @@ export default function App() {
   return(
      <BrowserRouter>
      <Routes>
-      <Route path="/register" element={<Register />} />
+      <Route path="/register" element={<Register />} />  
+      {/* this is a comment */}
       <Route path="/login" element={<Login />} />
       <Route path="/setAvatar" element={<SetAvatar />} />
       <Route path="/" element={<Chat />} />
-
      </Routes>
   </BrowserRouter>
   )
