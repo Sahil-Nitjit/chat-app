@@ -77,13 +77,13 @@ Start frontend command:
       
 💡 Screenshots
 Login Page
-<img width="727" height="810" alt="image" src="https://github.com/user-attachments/assets/1f67abde-817b-4181-8a1c-25fb5ec57c2b" />
+<img width="72" height="81" alt="image" src="https://github.com/user-attachments/assets/1f67abde-817b-4181-8a1c-25fb5ec57c2b" />
 
 Chat Dashboard
-<img width="1234" height="771" alt="image" src="https://github.com/user-attachments/assets/548bf4fc-3221-4261-ae15-4520a4b3898f" />
+<img width="123" height="77" alt="image" src="https://github.com/user-attachments/assets/548bf4fc-3221-4261-ae15-4520a4b3898f" />
 
 Real-Time Chat Interface
-<img width="1634" height="799" alt="image" src="https://github.com/user-attachments/assets/01e9be11-7116-4b7b-a45d-2b1d6aa51e9d" />
+<img width="163" height="79" alt="image" src="https://github.com/user-attachments/assets/01e9be11-7116-4b7b-a45d-2b1d6aa51e9d" />
 
 📌 Future Improvements
     ✅ Emoji support
