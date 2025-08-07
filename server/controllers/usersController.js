@@ -55,8 +55,16 @@ module.exports.getAllUsers = async (req, res, next) => {
 
 module.exports.setAvatar = async (req, res, next) => {
   try {
+    // console.log("Set Avatar called for user:", req.params.id);
+    // console.log("Image data received:", req.body.image?.substring(0, 50)); // preview
+
     const userId = req.params.id;
     const avatarImage = req.body.image;
+
+    if (!avatarImage || !avatarImage.startsWith("data:image/")) {
+      return res.status(400).json({ msg: "Invalid image format" });
+    }
+
     const userData = await User.findByIdAndUpdate(
       userId,
       {
@@ -65,11 +73,13 @@ module.exports.setAvatar = async (req, res, next) => {
       },
       { new: true }
     );
+
     return res.json({
       isSet: userData.isAvatarImageSet,
       image: userData.avatarImage,
     });
   } catch (ex) {
+    console.error("Set Avatar error:", ex);
     next(ex);
   }
 };

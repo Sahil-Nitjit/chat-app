@@ -22,6 +22,12 @@ export default function ChatContainer({currentChat,currentUser,socket}) {
     func();
     },[currentChat]);
 
+    const normalizeImage = (image) => {
+    return image.startsWith("data:image/")
+      ? image
+      : `data:image/jpeg;base64,${image}`;
+  };
+
     const handleSendMsg = async (msg) => {
         const data = await JSON.parse(
             localStorage.getItem("chat-app-user") 
@@ -64,10 +70,8 @@ export default function ChatContainer({currentChat,currentUser,socket}) {
     <div className="chat-header">
         <div className="user-details">
             <div className="avatar">
-            <img
-                src={`data:image/svg+xml;base64,${currentChat.avatarImage}`}
-                alt="avatar"
-              />
+           
+           <img src={currentChat.avatarImage} alt="Client Image" />
             </div>
             <div className="username">
                 <h3>{currentChat.username}</h3>
